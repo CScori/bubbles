@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+html,
+body,
+#root,
+.App {
+  width: auto;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.App {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(53, 59, 65);
+  background-image: url('../src/img/longbubs.png');
+  object-fit: cover;
+  // background-position: center;
+  height: 100vh;
+
+  svg {
+    height: 90%;
+  }
+  h1 {
+    height: 10%;
+    margin: 5px auto;
+    color: honeydew;
+  }
+  .reg {
+    margin: 20px auto;
+    width: 22%;
+    height: 30%;
+    background-color: rgba(193, 226, 255, 0.404);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+
+    .logs{
+      margin: auto;
+      
+      input {
+        margin: 15px;
+        border-radius: 8%;
+        height: 30px;
+      }
+      .login {
+        margin-left: 15px;
+        border-radius: 25px;
+        width: 80%;
+      }
+    }
+  }
+}
+
+.spacer {
+  height: 10%;
+}
+.bubDisplay {
+  display: flex;
+  color: white;
+  height: auto;
+
+}
+.bubble-wrap {
+  margin: 0 auto;
+  display: flex;
+  // flex-direction: column;
+}
+
+.colors-wrap {
+  height: 100%;
+  width: 300px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+  ul {
+    list-style: none;
+    text-align: start;
+
+    li {
+      cursor: pointer;
+      padding: 6px 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+}
+
+.delete {
+  color: rgb(216, 87, 87);
+}
+
+.color-box {
+  height: 16px;
+  width: 16px;
+  border: 1px lightgray solid;
+  margin-right: 36px;
+}
+
+form {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+
+  legend {
+    padding-left: 40px;
+    font-weight: bold;
+    text-align: left;
+    text-decoration: underline;
+    margin-bottom: 16px;
+  }
+
+  label {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 36px 4px 40px;
+  }
+
+  input {
+    width: 100px;
+  }
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 36px 0 41px;
+
+  button {
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 3px 8px;
+    margin-top: 16px;
+  }
+}
