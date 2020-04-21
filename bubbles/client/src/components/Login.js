@@ -38,8 +38,8 @@ const Login = () => {
   const classes = useStyles();
   const history = useHistory()
   const [userinfo, setUserinfo] = useState({
-    username: 'Lambda School',
-    password: 'i<3Lambd4'
+    username: 'User',
+    password: 'User'
   })
 
   const handleSubmit = e => {
