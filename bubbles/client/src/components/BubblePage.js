@@ -15,7 +15,7 @@ const BubblePage = () => {
         setColorList(res.data)
       })
       .catch(err => console.log('Failed to get colors data', err))
-      gsap.to(".gsap-circle", {duration: 2, rotation: 30, ease: "funWiggle"});
+     
 
     return () => {
       
