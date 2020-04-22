@@ -4,8 +4,6 @@
   "scripts": {
     "start": "node server.js",
 		"server": "nodemon server.js",
-		"migrate": "knex migrate:latest",
-		"unmigrate": "knex migrate:rollback",
 		"seed": "knex seed:run ",
 		"client": "npm run start --prefix client",
 		"test": "echo \"Error: no test specified\" && exit 1",
