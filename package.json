@@ -2,9 +2,15 @@
   "name": "bubbles",
   "version": "1.0.0",
   "scripts": {
-    "client": "cd client && npm start",
-    "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "start": "node server.js",
+		"server": "nodemon server.js",
+		"migrate": "knex migrate:latest",
+		"unmigrate": "knex migrate:rollback",
+		"seed": "knex seed:run ",
+		"client": "npm run start --prefix client",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "concurrently \"npm run server\" \"npm run client\"",
+ 
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
@@ -17,3 +23,4 @@
     "nodemon": "^2.0.2"
   }
 }
+  
