@@ -9,6 +9,17 @@ const token =
 
 app.use(bodyParser.json());
 app.use(CORS());
+// server.use(express.static(path.join(__dirname, "client/build")));
+
+
+if (process.env.NODE_ENV === 'production') {
+	// Set static   
+	server.use(express.static('client/build'));
+	server.get('*', (req, res) => {
+	  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+	});
+  }
+
 
 let colors = [
     {
@@ -101,6 +112,9 @@ function authenticator(req, res, next) {
   }
 }
 
+
+
+
 app.post("/api/login", (req, res) => {
   const { username, password } = req.body;
   if (username === "User" && password === "User") {
@@ -155,9 +169,9 @@ app.delete("/api/colors/:id", authenticator, (req, res) => {
   res.status(202).send(req.params.id);
 });
 
-app.get("/", function(req, res) {
-  res.send("App is working 👍");
-});
+// app.get("/", function(req, res) {
+//   res.send("App is working 👍");
+// });
 
 app.listen(port, () => {
   console.log("Server listening on port 5588");
