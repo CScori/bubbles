@@ -123,7 +123,7 @@ app.post("/api/login", (req, res) => {
       res.status(200).json({
         payload: token
       });
-    }, 1000);
+    }, 600000);
   } else {
     res
       .status(403)
