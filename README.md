@@ -1,5 +1,5 @@
-# Welcome to Soothing Bubbles
-An experience with single server data Authentication and validation. Live @[Soothing Bubbles](https://soothing-bubbles.herokuapp.com/)
+# Welcome to Bubbles Generator
+An experience with single server data Authentication and validation. Live @[Soothing Bubbles](https://bubble-generator.herokuapp.com/)
 
 
 # Use Cases
